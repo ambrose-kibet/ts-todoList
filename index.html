@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <section class="container">
+      <h2 class="text-center">Todo List</h2>
+      <form class="form">
+        <input
+          type="text"
+          name="form-input"
+          id="form-input"
+          class="form-input"
+        />
+        <button type="submit" class="add-btn button">add</button>
+      </form>
+      <ul class="list-container">
+        <li class="list-item">
+          <input type="checkbox" name="input-item" id="1" />
+          <label for="1" class="input">First Task</label>
+          <button type="button" class="button delete-btn">delete</button>
+        </li>
+      </ul>
+    </section>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
