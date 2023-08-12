@@ -9,6 +9,7 @@ interface List {
 }
 
 class ListItems implements List {
+  static instance: ListItems = new ListItems();
   taskList: ListItem[];
   private constructor() {
     this.taskList = [];
@@ -31,4 +32,14 @@ class ListItems implements List {
     this.taskList = [];
     this.save();
   }
+  removeItem(id: string): void {
+    this.taskList = this.taskList.filter((item) => item.id !== id);
+    this.save();
+  }
+  addItem(item: ListItem): void {
+    this.taskList.push(item);
+    this.save();
+  }
 }
+
+export default ListItems;
