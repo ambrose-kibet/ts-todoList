@@ -4,12 +4,14 @@ interface DisplayItems {
   clear(): void;
   render(list: ListItems): void;
 }
-
+const unoderedList = document.querySelector(
+  '.list-container'
+) as HTMLUListElement;
 export default class Display implements DisplayItems {
-  static instance: Display = new Display();
+  static instance: Display = new Display(unoderedList);
   ul: HTMLUListElement;
-  private constructor() {
-    this.ul = document.querySelector('.list-container') as HTMLUListElement;
+  constructor(_ul: HTMLUListElement) {
+    this.ul = _ul;
   }
   clear(): void {
     this.ul.textContent = '';

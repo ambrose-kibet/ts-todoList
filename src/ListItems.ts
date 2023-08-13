@@ -11,7 +11,7 @@ interface List {
 class ListItems implements List {
   static instance: ListItems = new ListItems();
   taskList: ListItem[];
-  private constructor() {
+  constructor() {
     this.taskList = [];
   }
   load(): void {
