@@ -1,7 +1,6 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import ListItems from '../ListItems';
 import ListItem from '../ListItem';
-const localStorage = vi.fn();
 describe('list item', () => {
   const newList = new ListItems();
   it('should  have an emty list to start with', () => {
